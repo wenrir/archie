@@ -1,26 +1,26 @@
 body {
-  color: white;
+  color: #ebdbb2;
   background-color: #202124;
 }
 
 ::-moz-selection {
-  background: blue;
-  color: #fff;
+  background: #458588;
+  color: #ebdbb2;
   text-shadow: none;
 }
 
 ::selection {
-  background: red;
-  color: #fff;
+  background: #665c54;
+  color: #ebdbb2;
   text-shadow: none;
 }
 
 hr {
-  border-top: 3px dotted blue;
+  border-top: 3px dotted #458588;
 }
 code {
-  background-color: lightblue;
-  color: black;
+  background-color: #83a598;
+  color: #282828;
   text-decoration: bold;
   padding: 0.1em 0.2em;
 }
@@ -31,7 +31,7 @@ pre {
   padding: 1em;
 }
 blockquote {
-  border-color: blue;
+  border-color: #458588;
 }
 
 h1,
@@ -40,36 +40,36 @@ h3,
 h4,
 h5,
 h6 {
-  color: #ddd;
+  color: #ebdbb2;
 }
 h1::before {
   color: var(--darkMaincolor);
-  content: "# ";
+  content: "* ";
 }
 h2::before {
   color: var(--darkMaincolor);
-  content: "## ";
+  content: "** ";
 }
 h3::before {
   color: var(--darkMaincolor);
-  content: "### ";
+  content: "*** ";
 }
 h4::before {
   color: var(--darkMaincolor);
-  content: "#### ";
+  content: "**** ";
 }
 h5::before {
   color: var(--darkMaincolor);
-  content: "##### ";
+  content: "***** ";
 }
 h6::before {
   color: var(--darkMaincolor);
-  content: "###### ";
+  content: "****** ";
 }
 
 .toc {
-  background-color: #272822;
-  color: white;
+  background-color: #282828;
+  color: #ebdbb2;
 }
 
 a {
@@ -114,7 +114,7 @@ a:hover {
 }
 .draft-label {
   color: var(--darkMaincolor);
-  background-color: blue;
+  background-color: #458588;
 }
 .highlight pre code[class=language-javaScript]::before,
 .highlight pre code[class="language-js"]::before {
@@ -156,6 +156,26 @@ a:hover {
   background: cyan;
   color: royalblue ;
 }
+
+.highlight pre code[class*='language-zig']::before{
+  content: 'Zig';
+  background: orange;
+  color: darkorange;
+}
+
+.highlight pre code[class*='language-rust']::before{
+  content: 'Rust';
+  background: indianred;
+  color: darkred;
+}
+
+.highlight pre code[class*='language-org']::before,
+.highlight pre code[class*='language-org']::before{
+  content: 'Org';
+  background: darkgrey;
+  color: dimgrey;
+}
+
 .highlight pre code[class*='language-md']::before,
 .highlight pre code[class*='language-md']::before{
   content: 'Markdown';
